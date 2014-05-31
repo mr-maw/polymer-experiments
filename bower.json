@@ -1,0 +1,22 @@
+{
+  "name": "polymer-tests",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mr-maw/polymer-tests",
+  "authors": [
+    "Ossi Hanhinen <hanhinen@gmail.com"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "core-ajax": "Polymer/core-ajax#~0.3.1"
+  }
+}
