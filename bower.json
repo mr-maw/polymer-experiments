@@ -3,12 +3,8 @@
   "version": "0.0.0",
   "homepage": "https://github.com/mr-maw/polymer-tests",
   "authors": [
-    "Ossi Hanhinen <hanhinen@gmail.com"
+    "Ossi Hanhinen <hanhinen@gmail.com>"
   ],
-  "moduleType": [
-    "globals"
-  ],
-  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
