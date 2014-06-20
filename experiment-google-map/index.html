@@ -1,24 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Google Map</title>
 
-  <link rel="import" href="../bower_components/platform/platform.js">
-  <link rel="import" href="../bower_components/google-map/google-map.html">
+  <script src="../bower_components/platform/platform.js"></script>
 
+  <link rel="import" href="../bower_components/google-map/google-map.html">
   <style>
+    html, body {
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
     google-map {
+      display: block;
       height: 100%;
     }
   </style>
 </head>
 <body>
 
-  <google-map latitude="37.77493" longitude="-122.41942">
-    <google-map-marker latitude="37.779" longitude="-122.3892"
-        title="Go Giants!"></google-map-marker>
+  <google-map zoom="8" disableDefaultUI>
+    <google-map-marker title="No idea where you are"></google-map-marker>
   </google-map>
+
+  <script>
+
+  // Get the geolocation, then update map position and marker
+  navigator.geolocation.getCurrentPosition(function(loc) {
+    var map = document.querySelector('google-map'),
+      marker = document.querySelector('google-map-marker');
+
+    marker.latitude = loc.coords.latitude;
+    marker.longitude = loc.coords.longitude;
+    marker.title = "Your location based on the browser";
+
+    map.latitude = loc.coords.latitude;
+    map.longitude = loc.coords.longitude;
+  });
+
+  </script>
 
 </body>
 </html>
